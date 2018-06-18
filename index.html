@@ -1,28 +1,128 @@
+<!DOCTYPE html>
+<!--A Declaration-->
+
+<html>
+<!--Opens the Doc-->
+
+<head>
+    <!--A lot of stuff you don't want user to see-->
+
+</head>
+
+<body>
+
 <h2>Jacob O. Durell, Esq.</h2>
-<main>
-  <p>Click here to view more <a href="#">cat photos</a>.</p>
+
+  <a href="https://www.linkedin.com/in/jake-durell-082b4b20/" target="_blank" >
+    <img class="smaller-image thin-img-border" src='./jake.jpeg' alt="A cute orange cat lying on its back.">
+  </a>
+
+  <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+  <script type="IN/Share" data-url="https://www.linkedin.com/in/jake-durell-082b4b20/"></script>
+
+<p>jdurell@gmail.com | 802-683-9211</p>
   
-  <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
-  
-  <p>Things Jake loves:</p>
-  <ul>
     <li>Hard Work</li>
     <li>Teamwork</li>
     <li>Economic Security</li>
-  </ul>
+
   <p>Top 3 things Jake hate:</p>
-  <ol>
+
+
     <li>flea treatment</li>
     <li>thunder</li>
     <li>other cats</li>
-  </ol>
+  
+  <h1>Grocery List</h1>
+
+  <table id=table1>
+    <tr>
+      <th>Fruit</th>
+      <th>Grains</th>
+      <th>Dairy</th>
+    </tr>
+    <tr>
+      <td>Apples</td>
+      <td>White Rice</td>
+      <td>Milk</td>
+    </tr>
+    <tr>
+      <td>Bananas</td>
+      <td>Oatmeal</td>
+      <td>Yogurt</td>
+    </tr>
+  </table>
+
+
   <form action="/submit-cat-photo">
-    <label><input type="radio" name="indoor-outdoor"> Indoor</label>
-    <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
-    <label><input type="checkbox" name="personality"> Loving</label>
-    <label><input type="checkbox" name="personality"> Lazy</label>
-    <label><input type="checkbox" name="personality"> Energetic</label><br>
+    <label>
+      <input type="radio" name="indoor-outdoor"> Indoor</label>
+    <label>
+      <input type="radio" name="indoor-outdoor"> Outdoor</label>
+    <br>
+    <label>
+      <input type="checkbox" name="personality"> Loving</label>
+    <label>
+      <input type="checkbox" name="personality"> Lazy</label>
+    <label>
+      <input type="checkbox" name="personality"> Energetic</label>
+    <br>
     <input type="text" placeholder="cat photo URL" required>
     <button type="submit">Submit</button>
   </form>
-</main>
+</body> -->
+
+
+<style>
+  body {
+      text-align: center;
+      list-style-position:inside;
+      background-color: rgba(155, 195, 91, 0.89);
+      /* Center in IE */
+  }
+  table#table1 {
+    text-align:center; 
+    margin-left:auto; 
+    margin-right:auto; 
+    width:300px;
+    width:100%; 
+    margin:4%;
+  }
+  main {
+      text-align: center;
+      /* Center in IE */
+  }
+  table {
+      text-align: center;
+      /* Center in IE */
+  }
+  li {
+      text-align: center;
+      /* Center in IE */
+  }
+  .red-text {
+      color: red;
+  }
+
+  h2 {
+      font-family: Lobster, monospace;
+  }
+
+  p {
+      font-size: 16px;
+      font-family: monospace;
+  }
+
+  .thin-img-border {
+      border-color: rgb(8, 41, 8);
+      border-width: 1px;
+      border-style: solid;
+      border-radius: 50%;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+      opacity: .7
+  }
+
+  .smaller-image {
+      width: 200px;
+  }
+</style>
