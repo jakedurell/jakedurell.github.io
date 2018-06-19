@@ -72,17 +72,7 @@
     margin: 4%;
   }
 
-  main {
-    text-align: center;
-    /* Center in IE */
-  }
-
-  table {
-    text-align: center;
-    /* Center in IE */
-  }
-
-  li {
+  main, table, li {
     text-align: center;
     /* Center in IE */
   }
@@ -147,12 +137,23 @@
 
   @keyframes spin {
     from {
-      transform: rotate(5deg);
+      transform: rotate(-5deg);
     }
     to {
       transform: rotate(0deg);
     }
   }
+  @keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
 
   @media only screen and (max-width: 300px) {
     .prev,
@@ -181,6 +182,10 @@
     max-width: 1000px;
     position: relative;
     margin: auto;
+    animation-name: slidein;
+    animation-duration: 1500ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
   }
 
   /* Next & previous buttons */
