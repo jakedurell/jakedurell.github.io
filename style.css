@@ -7,11 +7,11 @@
 body {
   text-align: center;
   list-style-position: center;
-  background-color: rgba(106, 231, 215, 0.89);
+  background-color: #5CDB95;
   align-self: center;
   height: 200px;
   margin: 0%;
-  padding: 10px;
+  color:#05386B;
 }
 
 .corePage {
@@ -34,12 +34,13 @@ body {
   transition: 0.3s;
   border-radius: 5px; /* 5px rounded corners */
   width: 300px;
-  height: 330px;
+  height: 350px;
   margin: 2%;
-  background-color: rgb(16, 184, 156);
-  border: 3px solid #73AD21;
+  background-color: #379683;
+  border: 3px solid #8EE4AF;
   padding: 10px;
   font-family: Lobster, monospace;
+  
 }
 
 /* Add some padding inside the card container */
@@ -51,35 +52,23 @@ body {
 
 h2 {
   font-family: Lobster, monospace;
+  font-weight: 1000000;
+  font-size: 30px;
+  height:25px;
 }
 
 p {
-  font-size: 16px;
+  font-size: 20px;
   font-family: Lobster, monospace;
+  font-weight: 1000;
+  height:15px;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 200px;
-  background-color: #f1f1f1;
-}
 
-li a {
-  display: block;
-  color: #000;
-  padding: 8px 16px;
-  text-decoration: none;
-}
 
-/* Change the link color on hover */
-li a:hover {
-  background-color: #555;
-  color: white;
-}
+
 .thin-img-border {
-  border-color: rgb(8, 41, 8);
+  border-color: #379683;
   border-width: 2px;
   border-style: solid;
   border-radius: 50%;
@@ -89,6 +78,7 @@ li a:hover {
 
 .smaller-image {
     width: 250px;
+    height:250px;
     max-width: 100%;
 
   /* The animation part: */
@@ -121,7 +111,7 @@ li a:hover {
   height: 15px;
   width: 15px;
   margin: 0 5px;
-  background-color: #bbb;
+  background-color: #EDF5E1;
   margin-top: 10px;
   border-radius: 50%;
   display: inline-block;
@@ -130,7 +120,7 @@ li a:hover {
 
 .active,
 .dot:hover {
-  background-color: #717171;
+  background-color: #05386B;
 }
 
 
@@ -158,7 +148,7 @@ body {
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 96px 0 rgba(6, 2, 44, 0.2);
 }
 
 
@@ -167,6 +157,7 @@ body {
 border-radius: 5px 5px 0 0;
 height: 200px;
 width: 100%;
+background-color: #EDF5E1
 }
 
 /* Position the "next button" to the right */
@@ -190,7 +181,7 @@ width: 100%;
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color:#EDF5E1;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -198,7 +189,7 @@ width: 100%;
 
 .active,
 .dot:hover {
-  background-color: #717171;
+  background-color: #05386B;
 }
 
 /* Fading animation */
@@ -208,6 +199,44 @@ width: 100%;
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
+}
+
+
+/* Place the navbar at the bottom of the page, and make it stick */
+.botnav {
+  background-color:#05386B;
+  overflow: hidden;
+  position: relative;
+  bottom: 0;
+  width: 102%;
+  margin-top: 40px;
+  margin-left: 0%;
+  margin-right: 0%;
+  left:0px;
+  right:0px;
+}
+
+/* Style the links inside the navigation bar */
+.botnav a {
+  float: left;
+  display: block;
+  color: #EDF5E1 ;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.botnav a:hover {
+  background-color: #EDF5E1;
+  color: #05386B;
+}
+
+/* Add a color to the active/current link */
+.botnav a.active {
+  background-color: #379683;
+  color: #EDF5E1;
 }
 
 @-webkit-keyframes fade {
