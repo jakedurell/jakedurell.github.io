@@ -1,22 +1,33 @@
 
 
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
+  /* margin: 0;
+    padding: 0; */
 }
 
 body {
   text-align: center;
-  list-style-position: center;
   background-color: #5CDB95;
-  align-self: center;
   height: 200px;
-  margin: 0%;
   color:#05386B;
+  font-family: Lobster, monospace; 
 }
 
-.corePage {
+.corePage{
+  justify-items: center;
+  display:block;
+  align-items: center;
+  box-align: center:
+}
 
-  /* display: block; */
+hr {
+  display: inline-block;
+}
+
+.dotDiv{
+  align-self: center;
+  flex:9;
 }
 
 .cardSection {
@@ -40,13 +51,6 @@ body {
   border: 3px solid #8EE4AF;
   padding: 10px;
   font-family: Lobster, monospace;
-  
-}
-
-/* Add some padding inside the card container */
-.container {
-  font-family: Lobster, monospace; 
-
 }
 
 
@@ -63,9 +67,6 @@ p {
   font-weight: 1000;
   height:15px;
 }
-
-
-
 
 .thin-img-border {
   border-color: #379683;
@@ -87,6 +88,7 @@ p {
   animation-iteration-count: 1;
   animation-timing-function: linear;
 }
+
 
 .ispin{
   animation-name: spin;
@@ -205,15 +207,35 @@ background-color: #EDF5E1
 /* Place the navbar at the bottom of the page, and make it stick */
 .botnav {
   background-color:#05386B;
-  overflow: hidden;
-  position: relative;
+  /* overflow: hidden; */
+  position: sticky;
   bottom: 0;
   width: 102%;
-  margin-top: 40px;
-  margin-left: 0%;
-  margin-right: 0%;
-  left:0px;
-  right:0px;
+  height: 75px;
+  margin-top: 80px;
+  font-family: Lobster, monospace;
+  font-weight: bold;
+}
+
+.topnav {
+  background-color:#05386B;
+  position: sticky;
+  overflow: hidden;
+  color: #EDF5E1;
+  width: 102%;
+  height:45px;
+  margin-bottom: 40px;
+  font-family: Lobster, monospace;
+  font-weight: bold;
+  text-align: left;
+  display: table;
+}
+
+.topText {
+  display:table-cell;
+  vertical-align: middle;
+  font-size: 25px;
+  padding-left: 40px;
 }
 
 /* Style the links inside the navigation bar */

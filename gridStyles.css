@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    }
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    /* padding: 10px; */
+    width: 250;
+    height: 250;
+    align-items: center;
+    text-align: center;
+  }
+  .grid-item {
+    background-color: #EDF5E1;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 22px;
+    font-size: 22px;
+    text-align: center;
+    height:70px;
+    width:100px;
+    align-self: center;
+    background-image: url('X.png');
+    
+  }
+
+  .grid-item:hover {
+    background-color:#379683;
+    /* color:#EDF5E1; */
+  }
+
+  .cardSection {
+    width: 100%;
+    height:auto;
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: .5rem;
+    justify-items: center;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+    width: 300px;
+    height: 350px;
+    margin: 2%;
+    background-color: #379683;
+    border: 3px solid #8EE4AF;
+    padding: 10px;
+    font-family: Candal, monospace;
+    
+  }
+  
+  /* Add some padding inside the card container */
+  .container {
+    font-family: Candal, monospace; 
+    margin-top: 10px;
+    text-align:center;
+    border: #05386B ;
+    border-width: 2px;
+    margin:0px;
+    padding:10px;
+  }
+
+  .switchBox {
+    display:grid;
+    display: inline-grid;
+
+  }
+  
+  /* The switch - the box around the slider */
+.switch {
+    position: relative;
+    width: 60px;
+    height: 34px;
+    float: left;
+    margin:3px;
+    clear:right;
+    display: inline-grid;
+  }
+ #switchLabel {
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display:block;
+    display: inline-grid;
+  }
+  
+  .startBox    {
+    width:125px;
+    height:125px;
+    float: left;
+    /* clear:right;
+    display:block; */
+    font-size: 20px;
+    font-weight:bolder;
+  }
+  .startBox   > b  {
+    width:80%;
+    float: left;
+    
+    padding:2px;
+    clear:right;
+    display:block;
+  }
+
+  #startBtn{
+    font-family: Candal, monospace;
+    font-size: 20px;
+    font-weight:bolder;
+    margin-top: 2px;
+  }
+
+  b {
+      
+    clear:right;
+  }
+
+  /* Hide default HTML checkbox */
+  .switch input {display:none;}
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #05386B;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #05386B;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+
+</head>
+
+<body onload='lockBtn()'>
+
+
+
+
+    <div class="cardSection">
+        <div class="card">
+            <div class="grid-container">
+                <button id="gi1" onclick="handleHumanTurn(1)" class="grid-item"></button>
+                <button id="gi2" onclick="handleHumanTurn(2)" class="grid-item"></button>
+                <button id="gi3" onclick="handleHumanTurn(3)" class="grid-item"></button>
+                <button id="gi4" onclick="handleHumanTurn(4)" class="grid-item"></button>
+                <button id="gi5" onclick="handleHumanTurn(5)" class="grid-item"></button>
+                <button id="gi6" onclick="handleHumanTurn(6)" class="grid-item"></button>
+                <button id="gi7" onclick="handleHumanTurn(7)" class="grid-item"></button>
+                <button id="gi8" onclick="handleHumanTurn(8)" class="grid-item"></button>
+                <button id="gi9" onclick="handleHumanTurn(9)" class="grid-item"></button>
+            </div>
+            <div class="container">
+                <div class='startBox'>
+                    <b>TIC</b>
+                    <b>&nbsp;TAC</b>
+                    <b>&nbsp;&nbsp;TOE</b>
+                    <button id="startBtn" onclick="startGame()">START</button>
+                </div>
+
+                <!-- Rectangular switch -->
+                <div id="switchBox">
+                    <b id="switchLabel">Robot</b>
+                    <label class="switch">
+                        <input id="humanBot" type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <b id="switchLabel">X is First</b>
+                    <label class="switch">
+                        <input id="goFirst" type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<link href="gridStyles.css" rel="stylesheet" type="text/css">
+<script src="tictacWeb.js"></script>
+<script src="minimax.js"></script>
+
+</html>
