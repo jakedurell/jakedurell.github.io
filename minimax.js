@@ -1,3 +1,5 @@
+// From https://codepen.io/jakedurell/pen/WyyPaE?editors=1111
+
 //to do:
 //  optimize the algo
 
@@ -94,9 +96,6 @@ function minimax(board, player) {
                 }
             }
         }
-        // console.log("Nodes is " + nodes)
-        // console.log("Board is " + board)
-        // console.log("NextB is " + nextBoard)
         return [nextVal, nextBoard];
     }
 }
@@ -108,9 +107,7 @@ function minimaxMove(board) {
 
 function makeMove(arrBoard) {
 
-    //arrBoard = ['x', 'e', 'e', 'e', 'o', 'e', 'e', 'e', 'x']
-    // console.log("ArrBoard at delivery is: ")
-    // console.log(arrBoard)
+
     for (let a = 0; a < 9; a++) {
         ////convert to minimax format
         if (arrBoard[a] === 'x') { arrBoard[a] = false }
@@ -121,21 +118,14 @@ function makeMove(arrBoard) {
         if (a > 2 && a < 6) { board[1][a - 3] = arrBoard[a] }
         if (a > 5) { board[2][a - 6] = arrBoard[a] }
     }
-    //board = [[false, null, null], [null, true, null], [null, null, false]]
-    // console.log("Board is : ")
-    // console.log(board)
+
     board = minimaxMove(board);
-    console.log("MiniMax baord is :")
-    console.log(board);
 
     let newBoard = []
 
     for (let i = 0; i < 3; i++) {
         for (let j = 0; j < 3; j++) {
-            // console.log("ArrB at " + i + "+" + j + " is: " + arrBoard[i + j])
-            // console.log("board at " + i + "+" + j + " is: " + board[i][j])
             arrBoard[(i * 3) + j] = board[i][j]
-            // console.log("ArrB at " + i + "+" + j + " is NOW: " + arrBoard[+ j])
         }
     }
     for (a = 0; a < 9; a++) {
@@ -144,6 +134,5 @@ function makeMove(arrBoard) {
         if (arrBoard[a] === true) { arrBoard[a] = 'o' }
         if (arrBoard[a] === null) { arrBoard[a] = 'e' }
     }
-    console.log("New array is: " +arrBoard)
     return arrBoard
 }

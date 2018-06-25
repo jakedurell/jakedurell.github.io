@@ -9,9 +9,6 @@
 
 <body onload='lockBtn()'>
 
-
-
-
     <div class="cardSection">
         <div class="card">
             <div class="grid-container">
@@ -28,22 +25,22 @@
             <div class="container">
                 <div class='startBox'>
                     <b>TIC</b>
-                    <b>&nbsp;TAC</b>
-                    <b>&nbsp;&nbsp;TOE</b>
+                    <b>TAC</b>
+                    <b>TOE</b>
                     <button id="startBtn" onclick="startGame()">START</button>
                 </div>
 
                 <!-- Rectangular switch -->
                 <div id="switchBox">
-                    <b id="switchLabel">Robot</b>
+                    <b  id = "label1" class="switchLabel">Robot Player O</b>
                     <label class="switch">
-                        <input id="humanBot" type="checkbox" checked>
+                        <input onclick = "botlabel()" id="humanBot" type="checkbox" checked>
                         <span class="slider"></span>
                     </label>
-                    <b id="switchLabel">X is First</b>
+                    <b id = "label2" class="switchLabel">Player X is First</b>
                     <label class="switch">
-                        <input id="goFirst" type="checkbox" checked>
-                        <span class="slider"></span>
+                        <input onclick = "xolabel()" id="goFirst" type="checkbox" checked>
+                        <span onlclick = "firstlabel()" class="slider"></span>
                     </label>
 
                 </div>

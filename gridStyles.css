@@ -9,21 +9,23 @@
     /* padding: 10px; */
     width: 250;
     height: 250;
-    align-items: center;
-    text-align: center;
+ 
   }
   .grid-item {
     background-color: #EDF5E1;
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 22px;
-    font-size: 22px;
+    font-size: 40px;
     text-align: center;
     height:70px;
     width:100px;
     align-self: center;
-    background-image: url('X.png');
-    
+    align-items: center;
+    font-family: 'Candal';
+    display: inline-block;
+    line-height: 20px;
   }
+  
 
   .grid-item:hover {
     background-color:#379683;
@@ -62,13 +64,14 @@
     border: #05386B ;
     border-width: 2px;
     margin:0px;
-    padding:10px;
+    padding:5px;
+    
   }
 
   .switchBox {
     display:grid;
-    display: inline-grid;
-
+    align-items: center;
+    text-align: center;
   }
   
   /* The switch - the box around the slider */
@@ -76,32 +79,34 @@
     position: relative;
     width: 60px;
     height: 34px;
-    float: left;
-    margin:3px;
-    clear:right;
     display: inline-grid;
+    margin:3px;
+    margin-bottom: 5px;
+    clear:right;
+    text-align: center;
+
+    
   }
- #switchLabel {
+ .switchLabel {
     text-align: left;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     display:block;
     display: inline-grid;
   }
   
   .startBox    {
-    width:125px;
+    width:100px;
     height:125px;
     float: left;
-    /* clear:right;
-    display:block; */
     font-size: 20px;
     font-weight:bolder;
+    align-items: center;
+    display: inline-grid;
   }
   .startBox   > b  {
     width:80%;
     float: left;
-    
     padding:2px;
     clear:right;
     display:block;
@@ -112,6 +117,8 @@
     font-size: 20px;
     font-weight:bolder;
     margin-top: 2px;
+    align-self: center;
+    width: 80px;
   }
 
   b {
@@ -130,7 +137,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: #05386B;
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -169,3 +176,8 @@
   .slider.round:before {
     border-radius: 50%;
   }
+
+  @font-face {
+    font-family: 'Candal';
+    src: url(Candal.ttf) format('ttf');
+}

@@ -13,7 +13,7 @@ let iboard = {
 }
 
 let say = function (string) {
-    console.log(string);
+    // console.log(string);
 }
 
 let user = 'x'
@@ -29,6 +29,13 @@ function lockBtn() {
     for (var i = 1; i < 10; i++) {
         let tttBtn = document.getElementById('gi' + i.toString())
         tttBtn.onclick = function () { return false; }
+    }
+}
+
+function unlockBtn() {
+    for (var i = 1; i < 10; i++) {
+        let tttBtn = document.getElementById('gi' + i.toString());
+        tttBtn.setAttribute("onClick", "handleHumanTurn(" + i + ")");
     }
 }
 
@@ -59,6 +66,7 @@ function isBotMove() {
     if (user.toUpperCase() === "O" && gameChoice === "B") {
         return true
     }
+
 }
 
 function placeTaken(move) {
@@ -77,6 +85,8 @@ function handleBotMove() {
 
     let boardArr = []
     let sendArr = []
+
+    //// Prep board for sending AI algo
     for (let i = 0; i < Object.keys(iboard).length; i++) {
         if (iboard[i + 1] === "X" || iboard[i + 1] === "O") {
             boardArr[i] = iboard[i + 1].toLowerCase()
@@ -86,29 +96,24 @@ function handleBotMove() {
             boardArr[i] = 'e'
             sendArr[i] = boardArr[i]
         }
-
     }
-    say("Board array before sending is: ")
-    let winArray = makeMove(sendArr)
-    say("Board array after function is: ")
-    say(boardArr)
-    say("And we get back: ")
-    console.log(winArray)
 
+    let winArray = makeMove(sendArr)    ///get board with best move
+
+    ///find best move in returned array, and apply to current board
     for (let i = 0; i < 9; i++) {
-        say("Im at " + i + "looping through the minimax board")
-        say("Here the element sent is " + boardArr[i] + " and we got back " + winArray[i])
         if (winArray[i].toString() != boardArr[i].toString()) {
-            say("Hey this didn't match!")
             iboard[i + 1] = user.toUpperCase()
             document.getElementById('gi' + (i + 1).toString()).textContent = user.toUpperCase()
-            say("Bot Moves to space " + (i + 1) + "!!!")
         }
     }
 
-    say("Im at the bottom of bot move")
-    if (getMovesLeft(iboard).length < 5) { wintest(user) }
-    changeUser();
+    lockBtn();
+
+    if (wintest(user) === false) {
+        changeUser();
+        unlockBtn();
+    }
 }
 
 function handleHumanTurn(move) {
@@ -118,12 +123,26 @@ function handleHumanTurn(move) {
     }
     else {
         //say('I AM THE CATCH ALL!!!')
+        lockBtn()
         iboard[move] = user.toUpperCase()
         document.getElementById('gi' + move.toString()).textContent = user.toUpperCase()
+
         if (wintest(user) === false) {
-            say(wintest(user))
             changeUser();
-            if (isBotMove()) { handleBotMove() }
+            if (!isBotMove()) { unlockBtn() }
+
+            if (isBotMove()) {
+                console.log("Access webcam for human vulnerability analysis...")
+                setTimeout(() => {
+                    console.log("Analyzing human email and document data for weakness...")
+                    setTimeout(() => {
+                        console.log("Optimizing all human flaw leveraging systems...")
+                        setTimeout(() => {
+                            handleBotMove()
+                        }, 200)
+                    }, 200)
+                }, 200)
+            }
         }
     }
 }
@@ -256,3 +275,22 @@ function getWinState(u) {
     return winArray
 }
 
+function botlabel() {
+    let label = document.getElementById("label1")
+    if (label.textContent === "Robot Player O") {
+        label.textContent = "Human Player O"
+    }
+    else {
+        label.textContent = "Robot Player O"
+    }
+}
+
+function xolabel() {
+    let label = document.getElementById("label2")
+    if (label.textContent === "Player X is First") {
+        label.textContent = "Player O is First"
+    }
+    else {
+        label.textContent = "Player X is First"
+    }
+}
