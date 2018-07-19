@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link href="ogrady.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="topnav">
+        <div class="topText">Make a Public Records Request</div>
+    </div>
+    <div class="container" style="margin-top: 20px;">
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <h3 class="text-center">What is your full name for the signature?</h3>
+                    <input type="text" class="form-control" id="sigName" onClick="this.setSelectionRange(0, this.value.length)">
+                </div>
+                <h3 class="text-center">Select one or more records categories...</h3>
+                <div class="well" style="max-height: 700px; overflow: auto;">
+                    <ul id="check-list-box" class="list-group checked-list-box">
+                        <li class="list-group-item">Electronic lists of all current legislative committees.</li>
+                        <li class="list-group-item" data-color="success">Electronic lists of all current Senators and Representatives</li>
+                        <li class="list-group-item" data-color="success">Electronic lists of all former Senators and Representatives</li>
+                        <li class="list-group-item" data-color="info">Electronic lists of all Bills, whether introduced or not, added to General Assembly databases in the past three (3) years.</li>
+                        <li class="list-group-item" data-color="warning">Electronic lists of all Acts, whether introduced or not, added to General Assembly databases in the past three (3) years.</li>
+                        <li class="list-group-item" data-color="warning">Electronic lists of all Resolves, whether introduced or not, added to General Assembly databases in the past three (3) years.</li>
+                        <li class="list-group-item" data-color="danger">Electronic lists of any committee action taken on any Bill, Act or Resolve in the past three (3) years.
+                        </li>
+                        <li class="list-group-item" data-color="danger">Any documentation, correspondence, manuals, instructions, diagrams, or other materials describing how any form of legislative data--including data relating in any way to bills, acts, resolves, legislators, committees, or committee activities--is stored or accessed by any Legislature website, API or other mechanism used by the legislature to retrieve or store data.
+                        </li>
+                        <li class="list-group-item" data-color="danger">Any documentation, correspondence, manuals, instructions, diagrams, or other materials relevant to the "Server Error" and other issues presented on committee specific pages during July 2018, including but not limited to the errors, missing data, and styling issues found at the following URL: https://legislature.vermont.gov/committee/bills/2018/19.</li>
+                        <li class="list-group-item" data-color="danger">Any contract, scope of work, or other materials about or relating to any consultant, software company, or other software provider, including any such person retained to develop or maintain legislature.vermont.gov, or any subdirectory of that site, or any associated API. 
+                        </li>
+                    </ul>
+                    <br />
+                    <button id="get-checked-data" class="btn btn-primary col-xs-12">Preview Request Email</button>
+                </div>
+                <p id="display-json"></p>
+            </div>
+            <div id="letterContainer" class="col-xs-6">
+                <div id="letter">
+                    Welcome to the public Legislative Records Request generator.
+                    <br />
+                    <br /> Just fill in your name at the left, and select the records request categories of interest. Then click the "Preview Request Email" to see a complete records request letter ready for sending.
+                    <br />
+                    <br /> When you are ready to send, click "Generate Email Request" and your default email client should open. If you have any problems, just copy and paste the preview email into an email, and send to the address inidicated below.
+                    <br />
+                    <br />
+                    <br />
+
+                </div>
+                <button id="genEmailRequest" href="" class="btn btn-primary col-xs-12">Generate Email Request     <img id="email" src="email.png"></button>
+
+                <button id="friendEmail" href="" class="btn btn-primary col-xs-12">Ask a friend to request a record!    <img id="buddies" src="buddies.png"></button>
+
+                <!-- <a id="emailLink" href="#">create email</a> -->
+            </div>
+
+
+        </div>
+    </div>
+    <div class="botnav">Nothing contained herein shall be considered legal advice or create an attorney client relationship. This site is for informational purposes only. Please consult an attorney for your specific public records needs or other legal issues. Emails generated through the site include a BCC field for the creator of the site to track and understand its use. You are not required to include the provided BCC email in your records request.
+    </div>
+</body>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+    crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+
+<script src="ogrady.js"></script>

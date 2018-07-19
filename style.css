@@ -2,8 +2,8 @@
 
 * {
   box-sizing: border-box;
-  /* margin: 0;
-    padding: 0; */
+  margin: 0;
+    padding: 0;
 }
 
 body {
@@ -15,19 +15,48 @@ body {
 }
 
 .corePage{
-  justify-items: center;
-  display:block;
+  
+  display:flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
   align-items: center;
-  box-align: center;
+  flex-wrap: wrap;
+  /* box-align: center; */
+}
+
+.slideshow-container {
+  min-width: 325px;
+  margin: 15px;
+  /* animation-name: slidein; */
+  animation-duration: 1500ms;
+  animation-iteration-count: 1;
+  animation-timing-function: linear; 
+}
+
+.dotDiv{
+  align-self: center;
+  flex:9;
 }
 
 hr {
   display: inline-block;
 }
 
-.dotDiv{
-  align-self: center;
-  flex:9;
+#aboutSection {
+  min-width: 350px;
+  max-width: 600px;
+  height: 500px;
+  border: 2px solid #05386B;
+  border-radius: 5%;
+  overflow:hidden;
+
+}
+#aboutTitle {
+  width: 100%;
+  height: 40px;
+  background: #379683;
+  
 }
 
 .cardSection {
@@ -136,16 +165,7 @@ body {
 }
 
 
-/* Slideshow container */
 
-.slideshow-container {
-  max-width: 100%;
-  margin: auto;
-  /* animation-name: slidein; */
-  animation-duration: 1500ms;
-  animation-iteration-count: 1;
-  animation-timing-function: linear; 
-}
 
 
 /* On mouse-over, add a deeper shadow */
@@ -207,8 +227,7 @@ background-color: #EDF5E1
 /* Place the navbar at the bottom of the page, and make it stick */
 .botnav {
   background-color:#05386B;
-  /* overflow: hidden; */
-  position: sticky;
+  position: static;
   bottom: 0;
   width: 102%;
   height: 75px;
@@ -219,8 +238,6 @@ background-color: #EDF5E1
 
 .topnav {
   background-color:#05386B;
-  position: sticky;
-  overflow: hidden;
   color: #EDF5E1;
   width: 102%;
   height:45px;
