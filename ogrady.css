@@ -100,16 +100,17 @@ body {
   font-size:15px;
 }
 
-#genEmailRequest, #friendEmail {
+#get-checked-data, #genEmailRequest, #friendEmail {
   margin:5px;
 }
 
-#buddies, #email {
+#gears, #buddies, #email {
   height:25px;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 .well {
   height: auto; 
   overflow: auto;
 }
+
