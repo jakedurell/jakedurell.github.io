@@ -10,9 +10,9 @@ let para3 = "Specifically, I would like a copy of all records falling within the
 
 let para4 = "I am requesting all records as of the date and time provided at the top of the body of this email ('Request Time'). To the extent any records requested are impermanent and records existing at the Request Time cannot be provided, I am requesting that records existing as close in time as possible to the Request Time be provided. I am expecting the fulfillment of this request within the statutorily required three (3) business days under 1 V.S.A. S.318(a)(2)."
 
-let para5 = "I am requesting that all such records be produced in their original format, regardless of whether they are kept in SQL database format, JSON, text files, excel files, csv files, or any other format. As my request is for data in its original form, I expect the response to include other information that is interwined with the data requested. Please understand I reserve any and all rights to argue that no legislative data is exempt from disclosure."
+let para5 = "I am requesting that all such records be produced in their original format, regardless of whether they are kept in SQL database format, JSON, text files, excel files, csv files, or any other format. As my request is for data in its original form, I expect the response to include other information that is intertwined with the data requested. Please understand I reserve any and all rights to argue that no legislative data is exempt from disclosure."
 
-let para6 = "This e-mail does not constitute an agreement to pay any costs in retrieving such records. If you believe that you have to create a record to satisfy the request, then you are not understanding the request. Please contact me if you need any clarification. Please understand that any misquoting of costs which obstructs my access to my records will likely require attorney review and response, for which I will seek compensation. I consider misquoting to include, but not be limited to include, (1) incorporating the costs of removing exempt data from otherwise public data; and (2) querying or accessing information when such queries or access protocol already exists, creating filters or other." 
+let para6 = "This e-mail does not constitute an agreement to pay any costs in retrieving such records. If you believe that you have to create a record to satisfy the request, then you are not understanding the request. Please contact me if you need any clarification. Please understand that any misquoting of costs which obstructs my access to my records will likely require attorney review and response, for which I will seek compensation. I consider misquoting to include, but not be limited to include, (1) incorporating the costs of removing exempt data from otherwise public data; and (2) querying or accessing information when such queries or access protocol already exists, creating filters or other."
 
 let closing = "Sincerely,"
 
@@ -97,16 +97,17 @@ $(function () {
         letterHTML += "<br><br>" + para1
         letterHTML += "<br><br>" + para2
         letterHTML += "<br><br>" + para3
+        letterHTML += "<u>"
 
 
         var checkedItems = {}, counter = 0;
         $("#check-list-box li.active").each(function (idx, li) {
             checkedItems[counter] = $(li).text();
-            console.log($(li).text())
             letterHTML += "<br><br>-" + $(li).text();
             counter++;
         });
         $('#display-json').html(JSON.stringify(checkedItems, null, '\t'));
+        letterHTML += "</u>"
 
         letterHTML += "<br><br>" + para4
         letterHTML += "<br><br>" + para5
@@ -118,8 +119,15 @@ $(function () {
         emailHTML += "bcc=jdurell@gmail.com"
         emailHTML += "&subject=Public Records Request"
         emailHTML += "&body="
+
+        letterHTML.replace(/<u>/g, "x")
+        letterHTML.replace(/<\/u>/g, "x")
+
         emailHTML += letterHTML.replace(/<br>/g, "%0D%0A")
-        
+
+        emailHTML = emailHTML.replace(/<u>/g, "")
+        emailHTML = emailHTML.replace(/<\/u>/g, "")
+
         // $("#genEmailRequest").attr("href", emailHTML).attr("target", "_blank");
 
     });
