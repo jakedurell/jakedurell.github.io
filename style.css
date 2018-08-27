@@ -6,6 +6,22 @@
     padding: 0;
 }
 
+div p {
+  padding:10px;
+  line-height: 25px;
+  display:inline-block;
+  text-align: justify;
+}
+
+#aboutBody {
+  margin-bottom: 20px;
+}
+
+iframe {
+  width: 80%;
+  min-height: 800px;
+}
+
 body {
   text-align: center;
   background-color: #5CDB95;
@@ -49,13 +65,17 @@ hr {
   height: 500px;
   border: 2px solid #05386B;
   border-radius: 5%;
-  overflow:hidden;
+  overflow:scroll;
 
 }
 #aboutTitle {
   width: 100%;
   height: 40px;
   background: #379683;
+  font-family: Lobster, monospace;
+  font-size: 25px;
+  color: #EDF5E1;
+  padding-top: 7px;
   
 }
 
@@ -64,8 +84,8 @@ hr {
   height:auto;
   display: grid;
   padding: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: .5rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: .2rem;
   justify-items: center;
 }
 
@@ -73,27 +93,32 @@ hr {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   border-radius: 5px; /* 5px rounded corners */
-  width: 300px;
-  height: 350px;
+  width: 350px;
+  height: 400px;
   margin: 2%;
   background-color: #379683;
   border: 3px solid #8EE4AF;
-  padding: 10px;
+  padding: 5px;
   font-family: Lobster, monospace;
+  overflow:scroll;
 }
 
 
+#nimblePhoto {
+  width:auto;
+}
+
 h2 {
   font-family: Lobster, monospace;
-  font-weight: 1000000;
+  font-weight: 10;
   font-size: 30px;
   height:25px;
 }
 
 p {
-  font-size: 20px;
+  font-size: 15px;
   font-family: Lobster, monospace;
-  font-weight: 1000;
+  font-weight: 10;
   height:15px;
 }
 
@@ -229,7 +254,7 @@ background-color: #EDF5E1
   background-color:#05386B;
   position: static;
   bottom: 0;
-  width: 102%;
+  width: 100%;
   height: 75px;
   margin-top: 80px;
   font-family: Lobster, monospace;
@@ -239,7 +264,7 @@ background-color: #EDF5E1
 .topnav {
   background-color:#05386B;
   color: #EDF5E1;
-  width: 102%;
+  width: 100%;
   height:45px;
   margin-bottom: 40px;
   font-family: Lobster, monospace;
@@ -326,7 +351,7 @@ background-color: #EDF5E1
     }
   }
 
-  @media only screen and (max-width: 500pt)  {
+  @media only screen and (max-width: 500px)  {
     body {
 
       /* background-color: rgba(219, 34, 96, 0.89); */

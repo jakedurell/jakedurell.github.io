@@ -50,12 +50,14 @@ function startGame() {
     }
 
     gameChoice = document.getElementById("humanBot")
-    if (gameChoice.checked) { gameChoice = "B" }
-    else { gameChoice = "F" }
+    gameChoice = "B"
+    // if (gameChoice.checked) { gameChoice = "B" }
+    // else { gameChoice = "F" }
 
     firstPlayer = document.getElementById("goFirst")
-    if (firstPlayer.checked) { user = "X" }
-    else { user = "O" }
+    user = "X"
+    // if (firstPlayer.checked) { user = "X" }
+    // else { user = "O" }
     say("First Player is " + user)
 
     if (isBotMove()) { handleBotMove() }

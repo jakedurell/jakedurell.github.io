@@ -3,12 +3,18 @@
 <html>
 
 <head>
+  <meta name="viewport" content="width=device-width">
   <link href="style.css" rel="stylesheet" type="text/css">
+  <link href="gridStyles.css" rel="stylesheet" type="text/css">
+  <script src="tictacWeb.js"></script>
+  <script src="minimax.js"></script>
+
+  <link rel="shortcut icon" href="./images/favicons.ico/favicon.ico" >
 </head>
 
-<body>
+<body onload='lockBtn()'>
   <div class="topnav">
-    <div class="topText">Jacob O. Durell</div>
+    <div class="topText">jakedurell.github.io</div>
   </div>
 
   <div class="corePage">
@@ -17,21 +23,40 @@
 
       <div class="mySlides fade">
         <div class="numbertext"></div>
-        <img class="smaller-image thin-img-border ispin" src='./construction.png' alt="J. Durell by Montreal Tracks">
+        <img class="smaller-image thin-img-border ispin" src='./images/slideshow/jodatbtvCharcoal.jpg' alt="J. Durell by Burlington, Vermont courthouse">
         <div class="text"></div>
       </div>
 
       <div class="mySlides fade">
         <div class="numbertext"></div>
-        <img class="smaller-image thin-img-border ispin2" src='./jake2.jpg' alt="J. Durell @ Musée national des beaux-arts du Québec">
+        <img class="smaller-image thin-img-border ispin2" src='./images/slideshow/stoweriver.jpg' alt="River in Stowe, Vermont">
         <div class="text"></div>
       </div>
 
       <div class="mySlides fade">
         <div class="numbertext"></div>
-        <img class="smaller-image thin-img-border ispin" src='./jake3.jpg' alt="J. Durell by Winooski Falls">
+        <img class="smaller-image thin-img-border ispin" src='./images/slideshow/jakequebec.jpg' alt="J. Durell @ Musée national des beaux-arts du Québec">
         <div class="text"></div>
       </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img class="smaller-image thin-img-border ispin" src='./images/slideshow/stanne.jpg' alt="St. Anne's Cathedral">
+        <div class="text"></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img class="smaller-image thin-img-border ispin" src='./images/slideshow/jakewaterworks.jpg' alt="J. Durell at Waterworks Restaurant in Winooski, Vermont">
+        <div class="text"></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img class="smaller-image thin-img-border ispin" src='./images/slideshow/btvwaterfront.jpg' alt="Burlington, Vermont waterfront at sunset">
+        <div class="text"></div>
+      </div>
+
 
 
 
@@ -41,12 +66,9 @@
         <span class="dot" onmouseover="currentSlide(1)"></span>
         <span class="dot" onmouseover="currentSlide(2)"></span>
         <span class="dot" onmouseover="currentSlide(3)"></span>
-        <span class="dot" onmouseover="currentSlide(1)"></span>
-        <span class="dot" onmouseover="currentSlide(2)"></span>
-        <span class="dot" onmouseover="currentSlide(3)"></span>
-        <span class="dot" onmouseover="currentSlide(1)"></span>
-        <span class="dot" onmouseover="currentSlide(2)"></span>
-        <span class="dot" onmouseover="currentSlide(3)"></span>
+        <span class="dot" onmouseover="currentSlide(4)"></span>
+        <span class="dot" onmouseover="currentSlide(5)"></span>
+        <span class="dot" onmouseover="currentSlide(6)"></span>
       </div>
       <br>
       <p class="topContact">jdurell@gmail.com</p>
@@ -55,41 +77,94 @@
     </div>
     <div id="aboutSection">
 
-      <div id=aboutTitle>
-        
-      </div>
-  </div>
+      <div id=aboutTitle>About Jake Durell
 
- 
+      </div>
+
+      <div id="aboutBody">
+        <p>Jake Durell first began his career in operations management and information systems. He went then went on to law school where
+          he focused his studies on how organizations work, and the forces that govern them. As a lawyer, he drew from his
+          technical background to help implement innovative contracting, compliance and litigation solutions. He later enrolled
+          in Burlington Code Academy’s first bootcamp to broaden his development skills. There, he and his capstone project
+          team produced a prototype for an effective non-emergency medical transportation solution which continues in development
+          today.
+        </p>
+        <br><br>
+        <p>Jake is now pursuing new opportunities in full stack web development. His formal legal and business education
+          and background enable unique problem-solving abilities. He is skilled in JavaScript, CSS, node, ReactJS, C#, and
+          SQL and non-relational database solutions. In addition, he has demonstrated experience in organizational and government
+          administration, process management, database development, information systems, governance, and agile project management.</p>
+      </div>
+
+
+    </div>
+
+
 
   </div>
   <hr width="25%">
   <div class="cardSection">
+
     <div class="card">
-      <img src="code.jpg" alt="Avatar">
+      <img src="./images/cards/portfolio.png" alt="Avatar">
       <div class="container">
         <h4>
-          <b>Development Background</b>
+          <b><a href="./resume.html">Resum&eacute;</a></b>
         </h4>
-        <p>The Full Stack Experience</p>
+        <p>Click <a href="./resume.html">here</a> to see my resum&eacute;.</p>
       </div>
     </div>
+
     <div class="card">
-      <img src="portfolio.png" alt="Portfolio">
+      <img id="nimblePhoto" src="./images/cards/nimble.png" alt="Portfolio">
       <div class="container">
         <h4>
-          <b>Portfolio</b>
+          <b><a href="http://www.nimble-health.com/">Nimble Health</a></b>
         </h4>
-        <p>A mixed but inspired bag...</p>
+        <p>Nimble Health is the result of a capstone project at Burlington Code Academy. It provides a web and mobile interface to facilitate non-emergency medical transportation. It uses the Google Maps API and Express.js.</p>
       </div>
     </div>
+
     <div class="card">
-      <img src="scales.png" alt="Scales of Justice">
-      <div class="container">
-        <h4>
-          <b>Law &amp; Advocacy</b>
-        </h4>
-        <p>Legal Experience</p>
+        <img id="geoVermont" src="./images/cards/ethanAllen.png" alt="Find Ethan Allen Game">
+        <div class="container">
+          <h4>
+            <b><a href="https://where-is-ethan-allen.herokuapp.com/">Where in Vermont is Ethan Allen?</a></b>
+          </h4>
+          <p>Learn about Vermont geography by trying to find Ethan Allen? Uses Leaflet API for mapping, and local storage to keep track of your high scores.</p>
+        </div>
+      </div>
+
+      <div class="card">
+          <img id="chatAmazing" src="./images/cards/aolWalkIcon2.png" alt="Chat Amazing @ Amazing Online">
+          <div class="container">
+            <h4>
+              <b><a href="https://chat-amazing.herokuapp.com/">Chat Amazing</a></b>
+            </h4>
+            <p>A functioning parody on a nostalgia inducing turn of the century chat service. A random name is given to each user from the randomuser.me API, and the user can then select from three chat rooms to join. The node.js  server that runs the gloabal chat service was made from scratch.</p>
+          </div>
+        </div>
+
+    <div class="card">
+      <div id="ticTacContainer">
+        <div class="grid-container">
+          <button id="gi1" onclick="handleHumanTurn(1)" class="grid-item"></button>
+          <button id="gi2" onclick="handleHumanTurn(2)" class="grid-item"></button>
+          <button id="gi3" onclick="handleHumanTurn(3)" class="grid-item"></button>
+          <button id="gi4" onclick="handleHumanTurn(4)" class="grid-item"></button>
+          <button id="gi5" onclick="handleHumanTurn(5)" class="grid-item"></button>
+          <button id="gi6" onclick="handleHumanTurn(6)" class="grid-item"></button>
+          <button id="gi7" onclick="handleHumanTurn(7)" class="grid-item"></button>
+          <button id="gi8" onclick="handleHumanTurn(8)" class="grid-item"></button>
+          <button id="gi9" onclick="handleHumanTurn(9)" class="grid-item"></button>
+        </div>
+      </div>
+      <div id="ticTacContainer" class="container">
+        <div id="tictacText" class='startBox'>
+          <b>UNBEATABLE</b>
+          <b>TIC TAC TOE</b>
+          <button id="startBtn" onclick="startGame()">START</button>
+        </div>
       </div>
     </div>
 
