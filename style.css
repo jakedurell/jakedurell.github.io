@@ -78,6 +78,10 @@ hr {
   padding-top: 7px;
   
 }
+ span img {
+   width: 20px;
+   height: auto;
+ }
 
 .cardSection {
   width: 100%;
