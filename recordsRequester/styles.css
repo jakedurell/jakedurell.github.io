@@ -1,0 +1,123 @@
+
+
+body {
+
+  background-color: #5CDB95;
+  color:#05386B;
+  font-family: Lobster, monospace; 
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#outerContainer {
+  background-color: #5CDB95;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+.container {
+  background-color: #5CDB95;
+  width: 100%;
+}
+
+
+/* Place the navbar at the bottom of the page, and make it stick */
+.botnav {
+  background-color:#05386B;
+  color: #EDF5E1;
+  position: static;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  font-size: 20px;
+  padding-left:25px;
+  padding-right:25px;
+  text-align: center;
+  font-family: Lobster, monospace;
+  font-weight: bold;
+}
+
+.topnav {
+  background-color:#05386B;
+  color: #EDF5E1;
+  width: 100%;
+  height:45px;
+  font-family: Lobster, monospace;
+  font-weight: bold;
+  text-align: left;
+  display: table;
+}
+
+.topText {
+  display:table-cell;
+  vertical-align: middle;
+  font-size: 25px;
+  padding-left: 40px;
+}
+
+/* Style the links inside the navigation bar */
+.botnav a {
+  float: left;
+  display: block;
+  color: #EDF5E1 ;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.botnav a:hover {
+  background-color: #EDF5E1;
+  color: #05386B;
+}
+
+/* Add a color to the active/current link */
+.botnav a.active {
+  background-color: #379683;
+  color: #EDF5E1;
+}
+
+
+/* CSS REQUIRED */
+.state-icon {
+  left: -5px;
+}
+.list-group-item-primary {
+  color: rgb(255, 255, 255);
+  background-color: rgb(66, 139, 202);
+}
+
+/* DEMO ONLY - REMOVES UNWANTED MARGIN */
+.well .list-group {
+  margin-bottom: 0px;
+}
+
+#display-json {
+
+  display:none;
+}
+
+#letter {
+  padding:5px;
+  font-weight: bold;
+  font-size:15px;
+}
+
+#get-checked-data, #genEmailRequest, #friendEmail {
+  margin:5px;
+}
+
+#gears, #buddies, #email {
+  max-height:25px;
+  margin-left: 10px;
+}
+
+.well {
+  height: auto; 
+  overflow: auto;
+}
+
+
+

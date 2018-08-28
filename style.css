@@ -208,7 +208,7 @@ body {
 border-radius: 5px 5px 0 0;
 height: 200px;
 width: 100%;
-background-color: #EDF5E1
+background-color: transparent
 }
 
 /* Position the "next button" to the right */
@@ -282,6 +282,12 @@ background-color: #EDF5E1
   vertical-align: middle;
   font-size: 25px;
   padding-left: 40px;
+  text-decoration: none;
+  color: #EDF5E1;
+}
+
+.topText a:visited {
+  color: #EDF5E1;
 }
 
 /* Style the links inside the navigation bar */
@@ -305,6 +311,11 @@ background-color: #EDF5E1
 .botnav a.active {
   background-color: #379683;
   color: #EDF5E1;
+}
+
+#recordsRequester {
+  width: auto;
+  background-color: transparent;
 }
 
 @-webkit-keyframes fade {

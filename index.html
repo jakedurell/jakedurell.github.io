@@ -5,16 +5,16 @@
 <head>
   <meta name="viewport" content="width=device-width">
   <link href="style.css" rel="stylesheet" type="text/css">
-  <link href="gridStyles.css" rel="stylesheet" type="text/css">
-  <script src="tictacWeb.js"></script>
-  <script src="minimax.js"></script>
+  <link href="./ticTacToe/gridStyles.css" rel="stylesheet" type="text/css">
+  <script src="./ticTacToe/tictacWeb.js"></script>
+  <script src="./ticTacToe/minimax.js"></script>
 
-  <link rel="shortcut icon" href="./images/favicons.ico/favicon.ico" >
+  <link rel="shortcut icon" href="./images/favicons.ico/favicon.ico">
 </head>
 
 <body onload='lockBtn()'>
   <div class="topnav">
-    <div class="topText">jakedurell.github.io</div>
+    <div class="topText"><a href="./index.html">jakedurell.github.io</a></div>
   </div>
 
   <div class="corePage">
@@ -72,9 +72,9 @@
       </div>
       <p class="topContact">jdurell@gmail.com</p>
       <br>
-      <p class="topContact"><a href="https://www.linkedin.com/in/jakedurell/">LinkedIn</a>  <span><img src="./images/In-2C-128px-TM.png"></span></p>
+      <p class="topContact"><a href="https://www.linkedin.com/in/jakedurell/">LinkedIn</a> <span><img src="./images/In-2C-128px-TM.png"></span></p>
       <br>
-      <p class="topContact"><a href="https://github.com/jakedurell">GitHub</a>  <span><img src="./images/GitHub-Mark-120px-plus.png"></span></p>
+      <p class="topContact"><a href="https://github.com/jakedurell">GitHub</a> <span><img src="./images/GitHub-Mark-120px-plus.png"></span></p>
     </div>
     <div id="aboutSection">
 
@@ -83,17 +83,16 @@
       </div>
 
       <div id="aboutBody">
-        <p>Jake Durell first began his career in operations management and information systems. He went then went on to law school where
-          he focused his studies on how organizations work, and the forces that govern them. As a lawyer, he drew from his
-          technical background to help implement innovative contracting, compliance and litigation solutions. He later enrolled
-          in Burlington Code Academy’s first bootcamp to broaden his development skills. There, he and his capstone project
-          team produced a prototype for an effective non-emergency medical transportation solution which continues in development
-          today.
+        <p>I first began my career in operations management and information systems. I then went on to law school where I
+          focused my studies on how organizations work, and the forces that govern them. As a lawyer, I drew from my technical
+          background to help implement innovative contracting, compliance and litigation solutions. I later enrolled in Burlington
+          Code Academy’s first bootcamp to broaden my development skills. There, my capstone project team and I produced
+          a prototype for an effective non-emergency medical transportation solution which continues in development today.
         </p>
         <br><br>
-        <p>Jake is now pursuing new opportunities in full stack web development. His formal legal and business education
-          and background enable unique problem-solving abilities. He is skilled in JavaScript, CSS, node, ReactJS, C#, and
-          SQL and non-relational database solutions. In addition, he has demonstrated experience in organizational and government
+        <p>I am now pursuing new opportunities in full stack web development. My formal legal and business education and
+          background enable unique problem-solving abilities. I am skilled in JavaScript, CSS, node, ReactJS, C#, and SQL
+          and non-relational database solutions. In addition, I have demonstrated experience in organizational and government
           administration, process management, database development, information systems, governance, and agile project management.</p>
       </div>
 
@@ -122,29 +121,43 @@
         <h4>
           <b><a href="http://www.nimble-health.com/">Nimble Health</a></b>
         </h4>
-        <p>Nimble Health is the result of a capstone project at Burlington Code Academy. It provides a web and mobile interface to facilitate non-emergency medical transportation. It uses the Google Maps API and Express.js.</p>
+        <p>Nimble Health is the result of a capstone project at Burlington Code Academy. It provides a web and mobile interface
+          to facilitate non-emergency medical transportation. It uses the Google Maps API and Express.js.</p>
       </div>
     </div>
 
     <div class="card">
-        <img id="geoVermont" src="./images/cards/ethanAllen.png" alt="Find Ethan Allen Game">
+      <img id="geoVermont" src="./images/cards/ethanAllen.png" alt="Find Ethan Allen Game">
+      <div class="container">
+        <h4>
+          <b><a href="https://where-is-ethan-allen.herokuapp.com/">Where in Vermont is Ethan Allen?</a></b>
+        </h4>
+        <p>Learn about Vermont geography by trying to find Ethan Allen? Uses Leaflet API for mapping, and local storage to
+          keep track of your high scores.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img id="chatAmazing" src="./images/cards/aolWalkIcon2.png" alt="Chat Amazing @ Amazing Online">
+      <div class="container">
+        <h4>
+          <b><a href="https://chat-amazing.herokuapp.com/">Chat Amazing</a></b>
+        </h4>
+        <p>A functioning parody on a nostalgia inducing turn of the century chat service. A random name is given to each
+          user from the randomuser.me API, and the user can then select from three chat rooms to join. The node.js server
+          that runs the gloabal chat service was made from scratch.</p>
+      </div>
+    </div>
+
+    <div class="card">
+        <img id="recordsRequester" src="./images/cards/vtSeal.png" alt="Vermont State Seal">
         <div class="container">
           <h4>
-            <b><a href="https://where-is-ethan-allen.herokuapp.com/">Where in Vermont is Ethan Allen?</a></b>
+            <b><a href="./recordsRequester/index.html">Public Records Requester</a></b>
           </h4>
-          <p>Learn about Vermont geography by trying to find Ethan Allen? Uses Leaflet API for mapping, and local storage to keep track of your high scores.</p>
+          <p>This is a beta version of a larger public records requesting app concept. This version automates the creation of a public records records request for electronic data from the Vermont State Legislature.</p>
         </div>
       </div>
-
-      <div class="card">
-          <img id="chatAmazing" src="./images/cards/aolWalkIcon2.png" alt="Chat Amazing @ Amazing Online">
-          <div class="container">
-            <h4>
-              <b><a href="https://chat-amazing.herokuapp.com/">Chat Amazing</a></b>
-            </h4>
-            <p>A functioning parody on a nostalgia inducing turn of the century chat service. A random name is given to each user from the randomuser.me API, and the user can then select from three chat rooms to join. The node.js  server that runs the gloabal chat service was made from scratch.</p>
-          </div>
-        </div>
 
     <div class="card">
       <div id="ticTacContainer">
