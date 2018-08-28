@@ -286,7 +286,7 @@ background-color: transparent
   color: #EDF5E1;
 }
 
-.topText a:visited, .topText a:link {
+.topText a:visited, .topText a:link, .topText a {
   color: #EDF5E1;
   text-decoration: none;
 }
