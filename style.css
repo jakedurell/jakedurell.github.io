@@ -17,9 +17,9 @@ div p {
   margin-bottom: 20px;
 }
 
-iframe {
+.iframe {
   width: 100%;
-  min-height: 1200px;
+  height: 1100px;
 }
 
 body {
@@ -81,7 +81,7 @@ hr {
   font-family: Lobster, monospace;
   font-size: 25px;
   color: #EDF5E1;
-  padding-top: 7px;
+  padding: 7px;
   text-shadow: 2px 2px black;
   
 }
@@ -104,8 +104,7 @@ hr {
 }
 
 .grid-item {
-  width: 160px;
-  height: 120px;
+
   float: left;
   background: #D26;
   border: 2px solid #333;
