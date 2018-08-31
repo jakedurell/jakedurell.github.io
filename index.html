@@ -3,21 +3,29 @@
 <html>
 
 <head>
+  <script integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
   <meta name="viewport" content="width=device-width">
   <link href="style.css" rel="stylesheet" type="text/css">
   <link href="./ticTacToe/gridStyles.css" rel="stylesheet" type="text/css">
   <script src="./ticTacToe/tictacWeb.js"></script>
   <script src="./ticTacToe/minimax.js"></script>
 
+
   <link rel="shortcut icon" href="./images/favicons.ico/favicon.ico">
 </head>
 
 <body onload='lockBtn()'>
   <div class="topnav">
-    <div class="topText"><a href="./index.html">jakedurell.github.io</a></div>
+    <div class="topText"><a href="#the-top" class="scrollLink">jakedurell.github.io</a></div>
+    <div class="nav-menu">
+      <div class="nav-about"><a href="#aboutTitle" class="scrollLink">About</a></div>
+      <div class="nav-portfolio"><a href="#portfolio" class="scrollLink">Portfolio</a></div>
+      <div class="nav-resume"><a href="#resume" class="scrollLink">Resum&eacute;</a></div>
+    </div>
   </div>
 
-  <div class="corePage">
+  <div id="the-top" class="corePage">
 
     <div class="slideshow-container">
 
@@ -41,7 +49,7 @@
 
       <div class="mySlides fade">
         <div class="numbertext"></div>
-        <img class="smaller-image thin-img-border ispin" src='./images/slideshow/stanne.jpg' alt="St. Anne's Cathedral">
+        <img class="smaller-image thin-img-border ispin2" src='./images/slideshow/stanne.jpg' alt="St. Anne's Cathedral">
         <div class="text"></div>
       </div>
 
@@ -53,7 +61,7 @@
 
       <div class="mySlides fade">
         <div class="numbertext"></div>
-        <img class="smaller-image thin-img-border ispin" src='./images/slideshow/btvwaterfront.jpg' alt="Burlington, Vermont waterfront at sunset">
+        <img class="smaller-image thin-img-border ispin2" src='./images/slideshow/btvwaterfront.jpg' alt="Burlington, Vermont waterfront at sunset">
         <div class="text"></div>
       </div>
 
@@ -74,8 +82,11 @@
       <br>
       <p class="topContact"><a href="https://www.linkedin.com/in/jakedurell/">LinkedIn</a> <span><img src="./images/In-2C-128px-TM.png"></span></p>
       <br>
+
       <p class="topContact"><a href="https://github.com/jakedurell">GitHub</a> <span><img src="./images/GitHub-Mark-120px-plus.png"></span></p>
+
     </div>
+
     <div id="aboutSection">
 
       <div id=aboutTitle>About Jake Durell
@@ -102,20 +113,17 @@
 
 
   </div>
+
   <hr width="25%">
-  <div class="cardSection">
 
-    <div class="card">
-      <img src="./images/cards/portfolio.png" alt="Avatar">
-      <div class="container">
-        <h4>
-          <b><a href="./resume.html">Resum&eacute;</a></b>
-        </h4>
-        <p>Click <a href="./resume.html">here</a> to see my resum&eacute;.</p>
-      </div>
-    </div>
+  <h1 id="portfolio">PORTFOLIO</h1>
 
-    <div class="card">
+  <hr width="25%">
+
+  <div class="grid cardSection">
+
+
+    <div class="grid-item card nimble">
       <img id="nimblePhoto" src="./images/cards/nimble.png" alt="Portfolio">
       <div class="container">
         <h4>
@@ -126,18 +134,18 @@
       </div>
     </div>
 
-    <div class="card">
+    <div class="grid-item card ethan-allen">
       <img id="geoVermont" src="./images/cards/ethanAllen.png" alt="Find Ethan Allen Game">
       <div class="container">
         <h4>
           <b><a href="https://where-is-ethan-allen.herokuapp.com/">Where in Vermont is Ethan Allen?</a></b>
         </h4>
-        <p>Learn about Vermont geography by trying to find Ethan Allen? Uses Leaflet API for mapping, and local storage to
+        <p>Learn about Vermont geography by trying to find Ethan Allen. Uses Leaflet API for mapping, and local storage to
           keep track of your high scores.</p>
       </div>
     </div>
 
-    <div class="card">
+    <div class="grid-item card amazing">
       <img id="chatAmazing" src="./images/cards/aolWalkIcon2.png" alt="Chat Amazing @ Amazing Online">
       <div class="container">
         <h4>
@@ -145,32 +153,33 @@
         </h4>
         <p>A functioning parody on a nostalgia inducing turn of the century chat service. A random name is given to each
           user from the randomuser.me API, and the user can then select from three chat rooms to join. The node.js server
-          that runs the gloabal chat service was made from scratch.</p>
+          that runs the global chat service was made from scratch.</p>
       </div>
     </div>
 
-    <div class="card">
-        <img id="recordsRequester" src="./images/cards/vtSeal.png" alt="Vermont State Seal">
-        <div class="container">
-          <h4>
-            <b><a href="./recordsRequester/index.html">Public Records Requester</a></b>
-          </h4>
-          <p>This is a beta version of a larger public records requesting app concept. This version automates the creation of a public records records request for electronic data from the Vermont State Legislature.</p>
-        </div>
+    <div class="grid-item card records">
+      <img id="recordsRequester" src="./images/cards/vtSeal.png" alt="Vermont State Seal">
+      <div class="container">
+        <h4>
+          <b><a href="./recordsRequester/index.html">Public Records Requester</a></b>
+        </h4>
+        <p>This is a beta version of a larger public records requesting app concept. This version automates the creation
+          of a public records records request for electronic data from the Vermont State Legislature.</p>
       </div>
+    </div>
 
-    <div class="card">
+    <div class="grid-item card tic-tac-toe">
       <div id="ticTacContainer">
         <div class="grid-container">
-          <button id="gi1" onclick="handleHumanTurn(1)" class="grid-item"></button>
-          <button id="gi2" onclick="handleHumanTurn(2)" class="grid-item"></button>
-          <button id="gi3" onclick="handleHumanTurn(3)" class="grid-item"></button>
-          <button id="gi4" onclick="handleHumanTurn(4)" class="grid-item"></button>
-          <button id="gi5" onclick="handleHumanTurn(5)" class="grid-item"></button>
-          <button id="gi6" onclick="handleHumanTurn(6)" class="grid-item"></button>
-          <button id="gi7" onclick="handleHumanTurn(7)" class="grid-item"></button>
-          <button id="gi8" onclick="handleHumanTurn(8)" class="grid-item"></button>
-          <button id="gi9" onclick="handleHumanTurn(9)" class="grid-item"></button>
+          <button id="gi1" onclick="handleHumanTurn(1)" class="ttt-grid-item"></button>
+          <button id="gi2" onclick="handleHumanTurn(2)" class="ttt-grid-item"></button>
+          <button id="gi3" onclick="handleHumanTurn(3)" class="ttt-grid-item"></button>
+          <button id="gi4" onclick="handleHumanTurn(4)" class="ttt-grid-item"></button>
+          <button id="gi5" onclick="handleHumanTurn(5)" class="ttt-grid-item"></button>
+          <button id="gi6" onclick="handleHumanTurn(6)" class="ttt-grid-item"></button>
+          <button id="gi7" onclick="handleHumanTurn(7)" class="ttt-grid-item"></button>
+          <button id="gi8" onclick="handleHumanTurn(8)" class="ttt-grid-item"></button>
+          <button id="gi9" onclick="handleHumanTurn(9)" class="ttt-grid-item"></button>
         </div>
       </div>
       <div id="ticTacContainer" class="container">
@@ -184,38 +193,28 @@
 
   </div>
 
+  <hr width="25%">
+
+  <h1 id="resume">RESUM&Eacute;</h1>
+
+  <hr width="25%">
+
+  <div class="resume">
+    <div class="container">
+      <p class="resumeText">View resum&eacute; below or <a href="./documents/resumeDurellJacob.pdf">click here</a> to download
+        a copy.</p>
+    </div>
+  </div>
+
+  <iframe src="./documents/resumeDurellJacob.pdf">
+    This browser does not support PDFs. Please download the PDF to view it: <a href="./documents/resumeDurellJacob.pdf">Download
+      PDF
+    </a>
+  </iframe>
+
   <div class="botnav">
 
   </div>
 
+  <script src="./index.js"></script>
 </body>
-
-<script>
-  var slideIndex = 1;
-  showSlides(slideIndex);
-
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-
-  function showSlides(n) {
-
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-  }
-</script>

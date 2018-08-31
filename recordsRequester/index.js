@@ -23,6 +23,10 @@ let friendHTML
 
 let friendEmail = "Hi!%0D%0A%0D%0AI wanted to tell you about an easy way to request request recors about issues that matter to you. Fortunately, we have a good public records law and it is easy to ask the State for the info that concerns you, and this lets them know what matters to you. Just go to https://jakedurell.github.io and use the form to create your own email records request to legislative council. Let's get this sorted out ASAP!%0D%0A%0D%0AThanks!%0D%0A-"
 
+let warnText = `<br />
+<br /> <span style="color:red">If the email does not generate, make sure your browser is set up to use "mailto" links. See <a href="https://support.procore.com/faq/how-do-i-change-my-web-browsers-default-email-client-for-mailto-links">this link</a> or search google for options to make mailto links work for you. You can also copy the generated letter to your email, and email the request to sgtatarms@leg.state.vt.us. 
+</span><br />`
+
 $(function () {
     $('.list-group.checked-list-box .list-group-item').each(function () {
 
@@ -119,7 +123,7 @@ $(function () {
         letterHTML += "<br><br>" + para7
         letterHTML += "<br><br>" + closing
         letterHTML += "<br>" + $("#sigName").val()
-        $("#letter").html(letterHTML)
+        $("#letter").html(letterHTML + warnText)
         emailHTML = "mailto:sgtatarms@leg.state.vt.us?"
         emailHTML += "bcc=jdurell@gmail.com"
         emailHTML += "&subject=Public Records Request"

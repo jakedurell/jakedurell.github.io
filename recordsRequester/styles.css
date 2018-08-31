@@ -49,6 +49,12 @@ body {
   display: table;
 }
 
+#topImage {
+  width: 60px;
+  height: auto;
+  margin: 4px;
+}
+
 .topText {
   display:table-cell;
   vertical-align: middle;
