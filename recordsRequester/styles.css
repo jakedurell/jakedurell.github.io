@@ -4,7 +4,7 @@ body {
 
   background-color: #5CDB95;
   color:#05386B;
-  font-family: Lobster, monospace; 
+  font-family: 'Open Sans', sans-serif, monospace; 
   margin: 0;
   padding: 0;
   width: 100%;
@@ -34,7 +34,7 @@ body {
   padding-left:25px;
   padding-right:25px;
   text-align: center;
-  font-family: Lobster, monospace;
+  font-family: 'Open Sans', sans-serif, monospace;
   font-weight: bold;
 }
 
@@ -43,7 +43,7 @@ body {
   color: #EDF5E1;
   width: 100%;
   height:45px;
-  font-family: Lobster, monospace;
+  font-family: 'Open Sans', sans-serif, monospace;
   font-weight: bold;
   text-align: left;
   display: table;
