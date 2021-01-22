@@ -1,235 +1,482 @@
 <!DOCTYPE html>
 
 <html>
+    <head>
+        <title>Jacob O. Durell</title>
+        <script
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+        <meta name="viewport" content="width=device-width" />
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <link
+            href="./ticTacToe/gridStyles.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <script src="./ticTacToe/tictacWeb.js"></script>
+        <script src="./ticTacToe/minimax.js"></script>
 
-<head>
-  <script integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
-  <meta name="viewport" content="width=device-width">
-  <link href="style.css" rel="stylesheet" type="text/css">
-  <link href="./ticTacToe/gridStyles.css" rel="stylesheet" type="text/css">
-  <script src="./ticTacToe/tictacWeb.js"></script>
-  <script src="./ticTacToe/minimax.js"></script>
+        <link rel="shortcut icon" href="./images/favicons.ico/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap"
+            rel="stylesheet"
+        />
+    </head>
 
-
-  <link rel="shortcut icon" href="./images/favicons.ico/favicon.ico">
-</head>
-
-<body onload='lockBtn()'>
-  <div class="topnav">
-    <div class="topText"><a href="#the-top" class="scrollLink">jakedurell.github.io</a></div>
-    <div class="nav-menu">
-      <div class="nav-about"><a href="#aboutTitle" class="scrollLink">About</a></div>
-      <div class="nav-portfolio"><a href="#portfolio" class="scrollLink">Portfolio</a></div>
-      <div class="nav-resume"><a href="#resume" class="scrollLink">Resum&eacute;</a></div>
-    </div>
-  </div>
-
-  <div id="the-top" class="corePage">
-
-    <div class="slideshow-container">
-
-      <div class="mySlides fade">
-        <div class="numbertext"></div>
-        <img class="smaller-image thin-img-border ispin" src='./images/slideshow/jodatbtvCharcoal.jpg' alt="J. Durell by Burlington, Vermont courthouse">
-        <div class="text"></div>
-      </div>
-
-      <div class="mySlides fade">
-        <div class="numbertext"></div>
-        <img class="smaller-image thin-img-border ispin2" src='./images/slideshow/stoweriver.jpg' alt="River in Stowe, Vermont">
-        <div class="text"></div>
-      </div>
-
-      <div class="mySlides fade">
-        <div class="numbertext"></div>
-        <img class="smaller-image thin-img-border ispin" src='./images/slideshow/jakequebec.jpg' alt="J. Durell @ Musée national des beaux-arts du Québec">
-        <div class="text"></div>
-      </div>
-
-      <div class="mySlides fade">
-        <div class="numbertext"></div>
-        <img class="smaller-image thin-img-border ispin2" src='./images/slideshow/stanne.jpg' alt="St. Anne's Cathedral">
-        <div class="text"></div>
-      </div>
-
-      <div class="mySlides fade">
-        <div class="numbertext"></div>
-        <img class="smaller-image thin-img-border ispin" src='./images/slideshow/jakewaterworks.jpg' alt="J. Durell at Waterworks Restaurant in Winooski, Vermont">
-        <div class="text"></div>
-      </div>
-
-      <div class="mySlides fade">
-        <div class="numbertext"></div>
-        <img class="smaller-image thin-img-border ispin2" src='./images/slideshow/btvwaterfront.jpg' alt="Burlington, Vermont waterfront at sunset">
-        <div class="text"></div>
-      </div>
-
-
-
-
-      <br>
-
-      <div class="dotDiv">
-        <span class="dot" onmouseover="currentSlide(1)"></span>
-        <span class="dot" onmouseover="currentSlide(2)"></span>
-        <span class="dot" onmouseover="currentSlide(3)"></span>
-        <span class="dot" onmouseover="currentSlide(4)"></span>
-        <span class="dot" onmouseover="currentSlide(5)"></span>
-        <span class="dot" onmouseover="currentSlide(6)"></span>
-      </div>
-      <p class="topContact">jdurell@gmail.com</p>
-      <br>
-      <p class="topContact"><a href="https://www.linkedin.com/in/jakedurell/"  target="_blank">LinkedIn</a> <span><img src="./images/In-2C-128px-TM.png"></span></p>
-      <br>
-
-      <p class="topContact"><a href="https://github.com/jakedurell" target="_blank" >GitHub</a> <span><img src="./images/GitHub-Mark-120px-plus.png"></span></p>
-
-    </div>
-
-    <div id="aboutSection">
-
-      <div id=aboutTitle>About Jake Durell
-
-      </div>
-
-      <div id="aboutBody">
-        <p>I first began my career in operations management and information systems. I then went on to law school where I
-          focused my studies on how organizations work, and the forces that govern them. As a lawyer, I drew from my technical
-          background to help implement innovative contracting, compliance and litigation solutions. I later enrolled in Burlington
-          Code Academy’s first bootcamp to broaden my development skills. There, my capstone project team and I produced
-          a prototype for an effective non-emergency medical transportation solution which continues in development today.
-        </p>
-        <br><br>
-        <p>I am now looking for new opportunities that will allow me to use my new development 
-          skills while leveraging my legal and business education and
-          experience--which enable unique problem-solving abilities in any field. 
-          I am skilled in JavaScript, CSS, node, React, Vue, C#, and SQL
-          and non-relational database solutions. 
-          I am also experienced in various project management and reporting tools, 
-          including GitHub, Trello, Visio, Sketch, Tableau, and Crystal Reports. 
-          In addition, I have demonstrated experience in organizational and government
-          administration, process management, database development, information systems, governance, and agile project management.</p>
-      </div>
-
-
-    </div>
-
-
-
-  </div>
-
-  <hr width="25%">
-
-  <h1 id="portfolio">PORTFOLIO</h1>
-
-  <hr width="25%">
-
-  <div class="grid cardSection">
-
-
-    <div class="grid-item card nimble">
-      <a href="http://www.nimble-health.com/" target="_blank" ><img id="nimblePhoto" src="./images/cards/nimble.png" alt="Portfolio"></a>
-      <div class="container">
-        <h4>
-          <b><a href="http://www.nimble-health.com/" target="_blank" >Nimble Health</a></b>
-        </h4>
-        <p>Nimble Health is the result of a capstone project at Burlington Code Academy. It provides a web and mobile interface
-          to facilitate non-emergency medical transportation. It uses the Google Maps API and Express.js.</p>
-      </div>
-    </div>
-
-    <div class="grid-item card ethan-allen">
-      <a href="https://where-is-ethan-allen.herokuapp.com/" target="_blank"><img id="geoVermont" src="./images/cards/ethanAllen.png" alt="Find Ethan Allen Game"></a>
-      <div class="container">
-        <h4>
-          <b><a href="https://where-is-ethan-allen.herokuapp.com/" target="_blank">Where in Vermont is Ethan Allen?</a></b>
-        </h4>
-        <p>Learn about Vermont geography by trying to find Ethan Allen. Uses Leaflet API for mapping, and local storage to
-          keep track of your high scores.</p>
-      </div>
-    </div>
-
-    <div class="grid-item card amazing">
-      <a href="https://chat-amazing.herokuapp.com/" target="_blank" ><img id="chatAmazing" src="./images/cards/aolWalkIcon2.png" alt="Chat Amazing @ Amazing Online"></a>
-      <div class="container">
-        <h4>
-          <b><a href="https://chat-amazing.herokuapp.com/" target="_blank" >Chat Amazing</a></b>
-        </h4>
-        <p>A functioning parody on a nostalgic turn of the century chat service. A random name is given to each user from
-          the randomuser.me API, and the user can then select from three chat rooms to join. The node.js server that runs
-          the global chat service was made from scratch.</p>
-      </div>
-    </div>
-
-    <div class="grid-item card records">
-      <a href="./recordsRequester/index.html"  target="_blank" ><img id="recordsRequester" src="./images/cards/vtSeal.png" alt="Vermont State Seal"></a>
-      <div class="container">
-        <h4>
-          <b><a href="./recordsRequester/index.html"  target="_blank" >Public Records Requester</a></b>
-        </h4>
-        <p>This is a beta version of a larger public records requesting app concept. This version automates the creation
-          of a public records records request for electronic data from the Vermont State Legislature.</p>
-      </div>
-    </div>
-
-    <div class="grid-item card tic-tac-toe">
-      <div id="ticTacContainer">
-        <div class="grid-container">
-          <button id="gi1" onclick="handleHumanTurn(1)" class="ttt-grid-item"></button>
-          <button id="gi2" onclick="handleHumanTurn(2)" class="ttt-grid-item"></button>
-          <button id="gi3" onclick="handleHumanTurn(3)" class="ttt-grid-item"></button>
-          <button id="gi4" onclick="handleHumanTurn(4)" class="ttt-grid-item"></button>
-          <button id="gi5" onclick="handleHumanTurn(5)" class="ttt-grid-item"></button>
-          <button id="gi6" onclick="handleHumanTurn(6)" class="ttt-grid-item"></button>
-          <button id="gi7" onclick="handleHumanTurn(7)" class="ttt-grid-item"></button>
-          <button id="gi8" onclick="handleHumanTurn(8)" class="ttt-grid-item"></button>
-          <button id="gi9" onclick="handleHumanTurn(9)" class="ttt-grid-item"></button>
+    <body onload="lockBtn()">
+        <div class="topnav">
+            <div class="topText">
+                <a href="#the-top" class="scrollLink">jakedurell.github.io</a>
+            </div>
+            <div class="nav-menu">
+                <div class="nav-about">
+                    <a href="#aboutTitle" class="scrollLink">About</a>
+                </div>
+                <div class="nav-portfolio">
+                    <a href="#portfolio" class="scrollLink">Portfolio</a>
+                </div>
+                <div class="nav-resume">
+                    <a href="#resume" class="scrollLink">Resum&eacute;</a>
+                </div>
+            </div>
         </div>
-      </div>
-      <div id="ticTacContainer" class="container">
-        <div id="tictacText" class='startBox'>
-          <b>UNBEATABLE</b>
-          <b>TIC TAC TOE</b>
-          <button id="startBtn" onclick="startGame()">START</button>
+
+        <div id="the-top" class="corePage">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="numbertext"></div>
+                    <img
+                        class="smaller-image thin-img-border ispin"
+                        src="./images/slideshow/jodatbtvCharcoal.jpg"
+                        alt="J. Durell by Burlington, Vermont courthouse"
+                    />
+                    <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext"></div>
+                    <img
+                        class="smaller-image thin-img-border ispin2"
+                        src="./images/slideshow/stoweriver.jpg"
+                        alt="River in Stowe, Vermont"
+                    />
+                    <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext"></div>
+                    <img
+                        class="smaller-image thin-img-border ispin"
+                        src="./images/slideshow/jakequebec.jpg"
+                        alt="J. Durell @ Musée national des beaux-arts du Québec"
+                    />
+                    <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext"></div>
+                    <img
+                        class="smaller-image thin-img-border ispin2"
+                        src="./images/slideshow/stanne.jpg"
+                        alt="St. Anne's Cathedral"
+                    />
+                    <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext"></div>
+                    <img
+                        class="smaller-image thin-img-border ispin"
+                        src="./images/slideshow/jakewaterworks.jpg"
+                        alt="J. Durell at Waterworks Restaurant in Winooski, Vermont"
+                    />
+                    <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext"></div>
+                    <img
+                        class="smaller-image thin-img-border ispin2"
+                        src="./images/slideshow/btvwaterfront.jpg"
+                        alt="Burlington, Vermont waterfront at sunset"
+                    />
+                    <div class="text"></div>
+                </div>
+
+                <br />
+
+                <div class="dotDiv">
+                    <span class="dot" onmouseover="currentSlide(1)"></span>
+                    <span class="dot" onmouseover="currentSlide(2)"></span>
+                    <span class="dot" onmouseover="currentSlide(3)"></span>
+                    <span class="dot" onmouseover="currentSlide(4)"></span>
+                    <span class="dot" onmouseover="currentSlide(5)"></span>
+                    <span class="dot" onmouseover="currentSlide(6)"></span>
+                </div>
+                <p class="topContact">jdurell@gmail.com</p>
+                <br />
+                <div class="social-links">
+                    <p class="topContact">
+                        <a
+                            href="https://www.linkedin.com/in/jakedurell/"
+                            target="_blank"
+                            >LinkedIn</a
+                        >
+                        <span><img src="./images/In-2C-128px-TM.png" /></span>
+                    </p>
+                    <br />
+
+                    <p class="topContact">
+                        <a href="https://github.com/jakedurell" target="_blank"
+                            >GitHub</a
+                        >
+                        <span
+                            ><img src="./images/GitHub-Mark-120px-plus.png"
+                        /></span>
+                    </p>
+                </div>
+            </div>
+
+            <div id="aboutSection">
+                <div id="aboutTitle">About Jake Durell</div>
+
+                <div id="aboutBody">
+                    <p>
+                        I first began my career in operations management and
+                        information systems. I then went on to law school
+                        seeking to understand and influence the constraints that
+                        shape solutions to world problems. As a lawyer, I drew
+                        from my technical background to help implement
+                        innovative contracting, compliance and litigation
+                        solutions. I later enrolled in Burlington Code Academy
+                        to broaden my development skills. Shortly thereafter, I
+                        began working as enterprise architect for State of
+                        Vermont at the recently formed Agency of Digital
+                        Services in the Chief Technology Office. I am also a
+                        tech lead with code for BTV, and I continue to provide
+                        representation in low and prono bono project.
+                    </p>
+                    <br /><br />
+                    <p>
+                        I am always looking for opportunities that will embrace
+                        my development skills while leveraging my legal and
+                        business education and experience. I am gaining more
+                        experience in full stack development each day.
+                        Javascript is my core language. I have been enjoying
+                        using the Vue framework on several projects. I am also
+                        skilled in a range of Microsoft Azure products which I
+                        used to bring legacy and modern systems together, and I
+                        have been leveraging DevOps to manage these projects and
+                        their codebases. I am comfortable with a range of
+                        various project management and reporting tools,
+                        including GitHub, Trello, Visio, Sketch, Tableau, and
+                        Power BI. In addition, I have demonstrated experience in
+                        organizational and government administration, process
+                        management, database development, information systems,
+                        governance, and agile project management.
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-  </div>
+        <hr width="25%" />
 
-  <hr width="25%">
-  
+        <h1 id="portfolio">PORTFOLIO</h1>
 
-  <h1 id="resume">RESUM&Eacute;</h1>
+        <hr width="25%" />
 
-  <hr width="25%">
+        <div class="grid cardSection">
+            <div class="grid-item card expunge-vt">
+                <img
+                    id="expungeVt"
+                    src="./images/cards/expungeVt.png"
+                    alt="State of Vermont Logo"
+                />
+                <div class="container">
+                    <h4>
+                        <b
+                            ><a
+                                href="https://chrome.google.com/webstore/detail/expungevt/kkooclhchngcejjphmbafbkkpnaimadn"
+                                target="_blank"
+                                >Expunge VT</a
+                            ></b
+                        >
+                    </h4>
+                    <p>
+                        Vermont Legal Aid runs free clinics throughout the year,
+                        but copying information off state databases and filling
+                        out petitions by hand is slow. By creating <a href="https://chrome.google.com/webstore/detail/expungevt/kkooclhchngcejjphmbafbkkpnaimadn?hl=en&authuser=0" target="_blank">a chrome
+                        extension</a> that generates printable files in a dynamic
+                        vue JS environment at the push of a button, volunteer
+                        attorneys help more people clear their records in every
+                        clinic.
+                    </p>
+                </div>
+            </div>
+            <div class="grid-item card my-vermont">
+                <img
+                    id="myVermont"
+                    src="./images/cards/myvermont.png"
+                    alt="State of Vermont Logo"
+                />
+                <div class="container">
+                    <h4>
+                        <b
+                            ><a
+                                href="http://info.my.vermont.gov/"
+                                target="_blank"
+                                >my.vermont.gov</a
+                            ></b
+                        >
+                    </h4>
+                    <p>
+                        my.vermont.gov is one piece of a single sign on
+                        initiative designed to ease access for public citizens
+                        across state agencies. Okta is used as the
+                        authentication provider. The initial version of the
+                        <a href="http://info.my.vermont.gov/" target="_blank"
+                            >central landing page</a
+                        >
+                        was built initially in vanilla JS, but a dynamic auth
+                        enable Vue JS version will launch in February 2020.
+                    </p>
+                </div>
+            </div>
+            <div class="grid-item card vdh-texting">
+                <img
+                    id="myVermont"
+                    src="./images/cards/covid.png"
+                    alt="State of Vermont Logo"
+                />
+                <div class="container">
+                    <h4>
+                        <b
+                            ><a
+                                href="https://www.healthvermont.gov/covid-19/symptoms-sickness/you-are-close-contact-someone-covid-19"
+                                target="_blank"
+                                >Covid Tracing & Vaccine Notifications</a
+                            ></b
+                        >
+                    </h4>
+                    <p>
+                        A rapidly developed state operated Covid solution
+                        through use of node express servers connected with on prem
+                        sql systems and cloud based texting services. The system
+                        <a
+                                href="https://www.healthvermont.gov/covid-19/symptoms-sickness/you-are-close-contact-someone-covid-19"
+                                target="_blank"
+                                >reliably informs contacts of possible exposure</a>, and is
+                        now being expanded to ensure citizens get timely vaccine
+                        notifications.
+                    </p>
+                </div>
+            </div>
+            <div class="grid-item card ethan-allen">
+                <a
+                    href="https://where-is-ethan-allen.herokuapp.com/"
+                    target="_blank"
+                    ><img
+                        id="geoVermont"
+                        src="./images/cards/ethanAllen.png"
+                        alt="Find Ethan Allen Game"
+                /></a>
+                <div class="container">
+                    <h4>
+                        <b
+                            ><a
+                                href="https://where-is-ethan-allen.herokuapp.com/"
+                                target="_blank"
+                                >Where in Vermont is Ethan Allen?</a
+                            ></b
+                        >
+                    </h4>
+                    <p>
+                        Learn about Vermont geography by trying to find Ethan
+                        Allen. Uses Leaflet API for mapping, and local storage
+                        to keep track of your high scores.
+                    </p>
+                </div>
+            </div>
+            <div class="grid-item card amazing">
+                <a href="https://chat-amazing.herokuapp.com/" target="_blank"
+                    ><img
+                        id="chatAmazing"
+                        src="./images/cards/aolWalkIcon2.png"
+                        alt="Chat Amazing @ Amazing Online"
+                /></a>
+                <div class="container">
+                    <h4>
+                        <b
+                            ><a
+                                href="https://chat-amazing.herokuapp.com/"
+                                target="_blank"
+                                >Chat Amazing</a
+                            ></b
+                        >
+                    </h4>
+                    <p>
+                        A functioning parody on a nostalgic turn of the century
+                        chat service. A random name is given to each user from
+                        the randomuser.me API, and the user can then select from
+                        three chat rooms to join. The node.js server that runs
+                        the global chat service was made from scratch.
+                    </p>
+                </div>
+            </div>
+            <div class="grid-item card records">
+                <a href="./recordsRequester/index.html" target="_blank"
+                    ><img
+                        id="recordsRequester"
+                        src="./images/cards/vtSeal.png"
+                        alt="Vermont State Seal"
+                /></a>
+                <div class="container">
+                    <h4>
+                        <b
+                            ><a
+                                href="./recordsRequester/index.html"
+                                target="_blank"
+                                >Public Records Requester</a
+                            ></b
+                        >
+                    </h4>
+                    <p>
+                        This is a beta version of a larger public records
+                        requesting app concept. This version automates the
+                        creation of a public records records request for
+                        electronic data from the Vermont State Legislature.
+                    </p>
+                </div>
+            </div>
+            <div class="grid-item card tic-tac-toe">
+                <div id="ticTacContainer">
+                    <div class="grid-container">
+                        <button
+                            id="gi1"
+                            onclick="handleHumanTurn(1)"
+                            class="ttt-grid-item"
+                        ></button>
+                        <button
+                            id="gi2"
+                            onclick="handleHumanTurn(2)"
+                            class="ttt-grid-item"
+                        ></button>
+                        <button
+                            id="gi3"
+                            onclick="handleHumanTurn(3)"
+                            class="ttt-grid-item"
+                        ></button>
+                        <button
+                            id="gi4"
+                            onclick="handleHumanTurn(4)"
+                            class="ttt-grid-item"
+                        ></button>
+                        <button
+                            id="gi5"
+                            onclick="handleHumanTurn(5)"
+                            class="ttt-grid-item"
+                        ></button>
+                        <button
+                            id="gi6"
+                            onclick="handleHumanTurn(6)"
+                            class="ttt-grid-item"
+                        ></button>
+                        <button
+                            id="gi7"
+                            onclick="handleHumanTurn(7)"
+                            class="ttt-grid-item"
+                        ></button>
+                        <button
+                            id="gi8"
+                            onclick="handleHumanTurn(8)"
+                            class="ttt-grid-item"
+                        ></button>
+                        <button
+                            id="gi9"
+                            onclick="handleHumanTurn(9)"
+                            class="ttt-grid-item"
+                        ></button>
+                    </div>
+                </div>
+                <div id="ticTacContainer" class="container">
+                    <div id="tictacText" class="startBox">
+                        <b>UNBEATABLE</b>
+                        <b>TIC TAC TOE</b>
+                        <button id="startBtn" onclick="startGame()">
+                            START
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item card nimble">
+                <img
+                    id="nimblePhoto"
+                    src="./images/cards/nimble.png"
+                    alt="Portfolio"
+                />
+                <div class="container">
+                    <h4>
+                        <b>Nimble Health</b>
+                    </h4>
+                    <p>
+                        Nimble Health is the result of a capstone project at
+                        Burlington Code Academy. It provides a web and mobile
+                        interface to facilitate non-emergency medical
+                        transportation. It uses the Google Maps API and
+                        Express.js.
+                    </p>
+                </div>
+            </div>
+        </div>
 
-  <div class="resume">
-    <div class="container">
-      <p class="resumeText">View resum&eacute; below or <a href="./documents/resumeDurellJake.pdf"  target="_blank" >click here</a> to download
-        a copy.</p>
-    </div>
+        <hr width="25%" />
 
-    <html>
+        <h1 id="resume">RESUM&Eacute;</h1>
 
-    <body >
-      <object class="iframe" data="./documents/resumeDurellJake.pdf" type="application/pdf">
-        <embed src="./documents/resumeDurellJake.pdf" type="application/pdf" />
-        <p>Your browser isn't supporting embedded pdf files. You can download the file
-            <a href="./documents/resumeDurellJake.pdf"  target="_blank" >here</a>.</p>
-      </object>
+        <hr width="25%" />
+
+        <div class="resume">
+            <div class="container">
+                <p class="resumeText">
+                    View resum&eacute; below or
+                    <a href="./documents/resumeDurellJake.pdf" target="_blank"
+                        >click here</a
+                    >
+                    to download a copy.
+                </p>
+            </div>
+
+            <html>
+                <body>
+                    <object
+                        class="iframe"
+                        data="./documents/resumeDurellJake.pdf"
+                        type="application/pdf"
+                    >
+                        <embed
+                            src="./documents/resumeDurellJake.pdf"
+                            type="application/pdf"
+                        />
+                        <p>
+                            Your browser isn't supporting embedded pdf files.
+                            You can download the file
+                            <a
+                                href="./documents/resumeDurellJake.pdf"
+                                target="_blank"
+                                >here</a
+                            >.
+                        </p>
+                    </object>
+                </body>
+            </html>
+        </div>
+
+        <div class="botnav"></div>
+
+        <script src="./index.js"></script>
     </body>
-
-    </html>
-
-  </div>
-
-
-
-  <div class="botnav">
-
-  </div>
-
-  <script src="./index.js"></script>
-</body>
+</html>
